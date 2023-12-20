@@ -5,7 +5,8 @@ for i in range(z):
 
     if x < 0 or x > 20:
         print("Not Valid")
-    elif x >= 10:
-        print("Passed")
     else:
-        print("Failed")
+        if x>=10:
+            print("Passed")
+        else:
+            print("Failed")
