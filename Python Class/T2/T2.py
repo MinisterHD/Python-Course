@@ -5,8 +5,10 @@ for i in range(z):
 
     if x < 0 or x > 20:
         print("Not Valid")
+    while x < 0 or x > 20:  
+        x = int(input("Enter a Valid Score: "))
     else:
-        if x>=10:
+        if x >= 10:
             print("Passed")
         else:
             print("Failed")
