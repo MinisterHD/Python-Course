@@ -17,8 +17,6 @@ for i in range(z):
     elif (PlayerMove=="Scissors") or (PlayerMove=="scissors" ):
         print("Pc Wins")
         PCPoints=PCPoints+1
-    else:
-        print("Inavlid")
 if PlayerPoints>PCPoints:
     print(f"Player Wins the Game {PlayerPoints} vs {PCPoints}")
 elif PlayerPoints==PCPoints:
