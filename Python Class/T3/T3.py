@@ -1,19 +1,31 @@
 #Rock Paper Scissors : Player VS Pc
 
-ComputerMove="Rock"
+ComputerMove="Scissors"
 PlayerPoints=0
 PCPoints=0
 z=int(input("How Many Rounds You Want to Play ? "))
 for i in range(z):
     PlayerMove=input("Make your Move : ")
-    while (PlayerMove!="Rock") and (PlayerMove !="rock") and (PlayerMove!="Paper") and (PlayerMove!="paper") and (PlayerMove!="Scissors") and (PlayerMove!="scissors" ):
+    while (PlayerMove!="Rock") and (PlayerMove!="Paper") and  (PlayerMove!="Scissors") :
         PlayerMove=input("Make your Move again: ")
-    if (PlayerMove=="Rock") or (PlayerMove=="rock") :
+    if PlayerMove==ComputerMove :
         print("Draw")
-    elif PlayerMove=="Paper" or (PlayerMove=="paper"):
+    elif (PlayerMove=="Paper") and (ComputerMove=="Rock"):
         print("Player Wins")
         PlayerPoints=PlayerPoints+1
-    elif (PlayerMove=="Scissors") or (PlayerMove=="scissors" ):
+    elif (PlayerMove=="Scissors") or (ComputerMove=="Rock" ):
+        print("Pc Wins")
+        PCPoints=PCPoints+1
+    elif (PlayerMove=="Paper") and (ComputerMove=="Scissors"):
+        print("Pc Wins Wins")
+        PCPoints=PCPoints+1
+    elif (PlayerMove=="Rock") or (ComputerMove=="Scissors" ):
+        print("Player Wins")
+        PlayerPoints=PlayerPoints+1
+    elif (PlayerMove=="Scissors") and (ComputerMove=="Paper"):
+        print("Player Wins")
+        PlayerPoints=PlayerPoints+1
+    elif (PlayerMove=="Rock") or (ComputerMove=="Paper" ):
         print("Pc Wins")
         PCPoints=PCPoints+1
 if PlayerPoints>PCPoints:
